@@ -1,8 +1,19 @@
+<script>
+import Navigation from './components/Navigation'
+
+export default {
+  name: 'app',
+  components: {
+    'Navigation': Navigation
+  }
+}
+</script>
+
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <Navigation></Navigation>
+      <p>여기에 이제 각 내용들 들어갑시다~</p>
     </div>
     <router-view/>
   </div>
@@ -14,6 +25,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  margin-top: 60px;
   color: #2c3e50;
 }
 
@@ -30,3 +42,4 @@
   }
 }
 </style>
+
