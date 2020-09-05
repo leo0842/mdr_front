@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/components/Home'
-import About from '@/components/About'
-import Lecture from '@/components/Lecture'
-import Community from '@/components/Community'
+import Home from '@/views/Home'
+import Lecture from '@/views/Lecture'
+import Community from '@/views/Community'
+import Question from '@/views/Question'
+import Login from '@/views/Login'
+import SignUp from '@/views/SignUp'
+import FindPassword from '@/views/findPassword'
 
 Vue.use(VueRouter)
 
@@ -14,11 +17,6 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: About
-  },
-  {
     path: '/lecture',
     name: 'Lecture',
     component: Lecture
@@ -27,6 +25,26 @@ Vue.use(VueRouter)
     path: '/community',
     name: 'Community',
     component: Community
+  },
+  {
+    path: '/question',
+    name: 'Question',
+    component: Question
+  },
+  {
+    path: '/login',
+    name: 'LogIn',
+    component: Login
+  },
+  {
+    path: '/signup',
+    name: 'SignUp',
+    component: SignUp
+  },
+  {
+    path: '/findpassword',
+    name: 'FindPassword',
+    component: FindPassword
   },
 ]
 

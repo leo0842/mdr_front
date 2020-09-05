@@ -13,7 +13,6 @@ export default {
   <div id="app">
     <div id="nav">
       <Navigation></Navigation>
-      <p>여기에 이제 각 내용들 들어갑시다~</p>
     </div>
     <router-view/>
   </div>

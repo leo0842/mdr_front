@@ -17,23 +17,33 @@ export default {
       links: [
         {
           id: 0,
-          text: 'Home',
+          text: '아이콘 넣기',
           page:'/'
         },
         {
           id: 1,
-          text: 'About',
-          page:'/About'
+          text: '강의들',
+          page:'/lecture'
         },
         {
           id: 2,
-          text: 'Lecture',
-          page:'/Lecture'
+          text: '커뮤니티',
+          page:'/community'
         },
         {
           id: 3,
-          text: 'Community',
-          page:'/Community'
+          text: '자주 묻는 질문',
+          page:'/question'
+        },
+        {
+          id: 4,
+          text: '로그인',
+          page:'/login'
+        },
+        {
+          id: 5,
+          text: '회원가입',
+          page:'/signup'
         }
       ]
     }
