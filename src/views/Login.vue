@@ -8,7 +8,7 @@
           <button class="btn btn-primary form-control btn-login" @click.prevent="submitted">로그인</button>
           <router-link to="/findpassword" class="find-password">비밀번호 찾기</router-link>
         </div>
-        <v-divider></v-divider>
+        <hr>
         <div class='login-box-center-oAuth'>
           <button class="btn btn-primary form-control btn-kakao" @click.prevent="submitted">카카오 로그인</button>
           <button class="btn btn-primary form-control btn-naver" @click.prevent="submitted">네이버 로그인</button>
@@ -96,6 +96,12 @@ export default {
   .btn-google {
     color: #292929;
     background-color: #ffffff;
+  }
+
+  hr {
+    width:100%;
+    text-align:left;
+    margin-left:0;
   }
 
 </style>
