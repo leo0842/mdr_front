@@ -23,7 +23,8 @@ export default {
 #app {
   position: absolute;
   left: 0;
-  width: 100%;;
+  width: 100%;
+  height: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
