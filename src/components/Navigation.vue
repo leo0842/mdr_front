@@ -1,10 +1,18 @@
 <template>
   <div>
-    <h2>Navigation Bar</h2>
     <nav>
-      <router-link class="spacing" v-for="routes in links" 
-      v-bind:key="routes.id"
-      :to="`${routes.page}`">{{routes.text}}</router-link>
+      <div class='navigation-block'>
+        <div class="navigation-block-left">
+          <router-link class="navigation-block-left-button" v-for="routes in leftlinks" 
+          v-bind:key="routes.id"
+          :to="`${routes.page}`">{{routes.text}}</router-link>
+        </div>
+        <div class="navigation-block-right">
+          <router-link class="navigation-block-right-button" v-for="routes in rightlinks" 
+          v-bind:key="routes.id"
+          :to="`${routes.page}`">{{routes.text}}</router-link>
+        </div>
+      </div>
     </nav>
   </div>
 </template>
@@ -14,7 +22,7 @@ export default {
   name: 'Navigation',
   data() {
     return {
-      links: [
+      leftlinks: [
         {
           id: 0,
           text: '아이콘 넣기',
@@ -34,14 +42,16 @@ export default {
           id: 3,
           text: '자주 묻는 질문',
           page:'/question'
-        },
+        }
+      ],
+    rightlinks: [
         {
-          id: 4,
+          id: 0,
           text: '로그인',
           page:'/login'
         },
         {
-          id: 5,
+          id: 1,
           text: '회원가입',
           page:'/signup'
         }
@@ -52,7 +62,52 @@ export default {
 </script>
 
 <style> 
-  .spacing { 
-    Margin-right: 10px; 
-  } 
+  .navigation-block { 
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    width: 100%;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    box-sizing: border-box;
+  }
+
+  .navigation-block-left, .navigation-block-right {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navigation-block-left {
+    width: 30%;
+  }
+
+  .navigation-block-right {
+    width: 15%;
+  }
+
+  .navigation-block-left-button {
+    display: flex;
+    width: 120px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .navigation-block-right-button {
+    display: flex;
+    width: 95px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 1px solid #000000;
+    border-radius: 8px;
+  }
+
+  .navigation-block-right-button:nth-child(2) {
+    color: #ffffff;
+    background-color: blueviolet;
+  }
+
 </style>
