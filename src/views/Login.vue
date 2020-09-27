@@ -5,7 +5,6 @@
         <div class='login-box-center-form'>
           <input type="text" id="email" class="form-control" placeholder="이메일" v-model="user.email">
           <input type="password" id="password" class="form-control" placeholder="비밀번호" v-model.lazy="user.password">
-          <button class="btn btn-primary form-control btn-login" @click.prevent="submitted">로그인</button>
           <router-link to="/findpassword" class="find-password">비밀번호 찾기</router-link>
         </div>
         <hr>
@@ -14,6 +13,12 @@
           <button class="btn btn-primary form-control btn-naver" @click.prevent="submitted">네이버 로그인</button>
           <button class="btn btn-primary form-control btn-google" @click.prevent="submitted">구글 로그인</button>
         </div>
+        <button
+          class="btn btn-primary form-control btn-login"
+          v-on:click="submitted"
+        >
+          로그인
+        </button>
     </div>
   </div>
 </template>
@@ -27,17 +32,26 @@ export default {
         email:"",
         password:""
       },
-      isSubmitted: false
-    }
+      data: "",
+    };
   },
   methods: {
-    submitted(){
-      this.isSubmitted = true;
-      this.$router.push({name: 'Home'})
-    }
-  }
-}
-
+    submitted() {
+      // POST request using fetch with set headers
+      const requestOptions = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(this.user),
+      };
+      console.log(this.user);
+      fetch("http://localhost:8000/user/signin/", requestOptions)
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    },
+  },
+};
 </script>
 <style>
   .login-box {
