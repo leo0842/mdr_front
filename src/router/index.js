@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home'
 import LectureView from '@/views/LectureView'
-import Community from '@/views/Community'
+import CommunityView from '@/views/CommunityView'
 import Question from '@/views/Question'
 import Login from '@/views/Login'
 import SignUp from '@/views/SignUp'
@@ -24,8 +24,8 @@ Vue.use(VueRouter)
   },
   {
     path: '/community',
-    name: 'Community',
-    component: Community
+    name: 'CommunityView',
+    component: CommunityView
   },
   {
     path: '/question',
