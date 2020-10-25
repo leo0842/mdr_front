@@ -8,6 +8,7 @@ import Login from '@/views/Login'
 import SignUp from '@/views/SignUp'
 import FindPassword from '@/views/findPassword'
 import Lecture from '@/components/Lecture'
+import Community from '@/components/Community'
 
 Vue.use(VueRouter)
 
@@ -51,7 +52,12 @@ Vue.use(VueRouter)
     path: '/lecture/:id',
     name: 'lecture',
     component: Lecture
-  }
+  },
+  {
+    path: '/community/:id',
+    name: 'community',
+    component: Community
+  },
 ]
 
 const router = new VueRouter({
