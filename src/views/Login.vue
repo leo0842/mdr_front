@@ -26,6 +26,10 @@
 <script>
 export default {
   name: 'Login', //this is the name of the component
+  mounted() {
+  window.Kakao.isInitialized()
+
+  },
   data(){
     return {
       user: {
@@ -49,6 +53,12 @@ export default {
       fetch("http://localhost:8000/user/signin/", requestOptions)
         .then((response) => response.json())
         .then((data) => console.log(data));
+    },
+
+    kakaoLogin() {
+      window.Kakao.Auth.authorize({
+        redirectUri: 'http://localhost:8080/login_callback_kakao'
+      })
     },
   },
 };
