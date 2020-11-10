@@ -9,7 +9,7 @@ import SignUp from '@/views/SignUp'
 import FindPassword from '@/views/findPassword'
 import Lecture from '@/components/Lecture'
 import Community from '@/components/Community'
-
+import LoginCallbackKakao from '@/views/LoginCallbackKakao'
 Vue.use(VueRouter)
 
   const routes = [
@@ -58,6 +58,11 @@ Vue.use(VueRouter)
     name: 'community',
     component: Community
   },
+  {
+    path: '/login_callback_kakao',
+    name: 'LoginCallbackKakao',
+    component: LoginCallbackKakao
+  }
 ]
 
 const router = new VueRouter({

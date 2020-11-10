@@ -9,7 +9,7 @@
         </div>
         <hr>
         <div class='login-box-center-oAuth'>
-          <button class="btn btn-primary form-control btn-kakao" @click.prevent="submitted">카카오 로그인</button>
+          <button class="btn btn-primary form-control btn-kakao" @click="kakaoLogin">카카오 로그인</button>
           <button class="btn btn-primary form-control btn-naver" @click.prevent="submitted">네이버 로그인</button>
           <button class="btn btn-primary form-control btn-google" @click.prevent="submitted">구글 로그인</button>
         </div>
